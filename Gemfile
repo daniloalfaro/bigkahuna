@@ -45,10 +45,10 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'active_model_serializers' # to serialize
+gem 'audited' # Log
 gem 'bcrypt', '~> 3.1.7' # To hash passwords
+gem 'faker' # Fake info
 gem 'jwt'
 gem 'knock' # Authentication Solution
-gem 'faker' # Fake info
-gem 'will_paginate' # Pagination
 gem 'pg_search' # Search
-gem 'audited' # Log
+gem 'will_paginate' # Pagination
