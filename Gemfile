@@ -52,4 +52,3 @@ gem 'faker' # Fake info
 gem 'will_paginate' # Pagination
 gem 'pg_search' # Search
 gem 'audited' # Log
-gem 'puma'
