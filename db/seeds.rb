@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
 User.create(
-  email: 'drakedalfa2@gmail.com',
+  email: 'normaluser@mail.com',
   password: '123456789',
   role: 'none'
 )
 
 User.create(
-  email: 'drakedalfa2@gmail.com',
+  email: 'adminuser@gmail.com',
   password: '123456789',
-  role: 'none'
+  role: 'admin'
 )
 
 100.times do
