@@ -10,6 +10,7 @@ Rails.application.routes.draw do
           get :buy
           get :rent
           get :return
+          get :like
         end
       end
       post 'user_token' => 'user_token#create'

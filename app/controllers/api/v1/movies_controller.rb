@@ -4,7 +4,7 @@ module Api
   module V1
     class MoviesController < ApplicationController
       before_action :movie?, only: %i[update destroy show availability buy rent
-                                      return]
+                                      return like]
 
       def index
         if current_user
@@ -91,6 +91,18 @@ module Api
         @movie_ = (@movie.image_attachment ? @movie.to_json(include: :image) : @movie.to_json)
 
         render json: @movie_
+      end
+
+      def like
+        return (render status: 401) unless current_user &&
+                                           current_user.role == 'none'
+
+        return (render status: 404) unless @movie
+
+        @like = @movie.likes.new(user_id: current_user.id)
+        return (render status: 422) unless @like.save
+
+        render json: @like, status: 200
       end
 
       def buy
